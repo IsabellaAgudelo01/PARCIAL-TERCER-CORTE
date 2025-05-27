@@ -7,6 +7,10 @@ Diany Kamila Guzmán Contreras
 - Ventajas por tipo: es decir, el daño se irá modificando dependiendo del tipo de ataque y defensa
 - Pantalla de estadísticas
 
+# _ Explicación detallada del código en C++_
+
+* Archivo tipos.h
+
 
 # Proyecto en Python
 **Desarrollos innovadores:*
