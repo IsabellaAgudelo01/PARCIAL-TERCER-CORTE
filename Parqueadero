@@ -1,0 +1,28 @@
+SISTEMA DE PARQUEADEROR EN PYTHON 
+Este proyecto va a simular un sistema basicode parqueadero en una matriz de 7x7.
+Permite ingresar y retirar vehiculos, calcular el tiempo de uso y el valor a pagar.
+#FUNCIONALIDAD 
+1.Visualizacion del mapa del parqueadero
+2.Ingreso de vehiculos de espacios libres
+3. Retiro de vehiculos con calculo de costo 
+4. Control por placa 
+5. Simulación de tiempo de entrada y salida 
+#ESTRUCTURA DEL PARQUEADEERO 
+1. El parqueadero va a tener una matriz de 7x7.
+2. Los espacios marcados con"L" estan libres.
+3. "X" representa un vehiculo estacionado 
+4. "E" es la entrada. 
+5. "S" es la salida.
+6. "." representa el pasillo.
+#TARIFAS
+1. See cobra $100 por minuto de permanencia 
+2. Si el tiempo es menor o igual a 0, se cobra como un minuto mínimo
+#MODO DE USO 
+1. Se ejecuta el progrma en Python 
+2. Aparecera un menu con tres opciones:
+   -1: Ingresar vehículo
+   -2: Retirar vehículo
+   -3: Salir del sistema
+3. Ingresa los datos que se solicitan en pantalla.
+
+
