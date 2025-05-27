@@ -9,3 +9,9 @@ Diany Kamila Guzmán Contreras
 
 
 # Proyecto en Python
+**Desarrollos innovadores:*
+-Historial de vehiculos retirados, con el tiempo y la tarifa.
+-Consulta de disponibilidad actual.
+-Visualización de historial completo desde el menú
+-Opcion para buscar un vehiculo por placa y ver su ubicacion actual
+
