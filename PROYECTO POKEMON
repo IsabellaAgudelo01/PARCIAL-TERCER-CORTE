@@ -14,26 +14,5 @@ como información adicional que complemente el juego y lo haga más dinámico
 _¿Cómo se llevó a cabo?_
 Se implementó una función `mostrar_stats` que muestra los Pokémon restantes de cada equipo con su salud y sus puntos de acción
 
-# Explicación detallada del código en C++
 
-# _Archivo tipos.h_
-  1. Siguiendo la estructura enseñada en clase y utilizando las librerías <string> y <vector>
-  ```cpp
-  #ifndef TIPOS_H
-  #define TIPOS_H
-  #include <string>
-  #include <vector>
-  using namespace std;
-  -
-  -
-  -
-  #endif
-  ```
-2. Estructura movimiento
-```cpp
- struct Movimiento {
- string nombre;
- int potencia;
- int costoPA; 
- };
-```
+
