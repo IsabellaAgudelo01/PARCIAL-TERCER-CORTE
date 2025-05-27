@@ -7,18 +7,32 @@ Diany Kamila Guzmán Contreras
 - Ventajas por tipo: es decir, el daño se irá modificando dependiendo del tipo de ataque y defensa
 - Pantalla de estadísticas
 
-# _Explicación detallada del código en C++_
+# Explicación detallada del código en C++
 
-* _Archivo tipos.h_
-  Siguiendo la estructura enseñada en clase:
+# _Archivo tipos.h_
+  1. Siguiendo la estructura enseñada en clase y utilizando las librerías <string> y <vector>
   ```cpp
   #ifndef TIPOS_H
   #define TIPOS_H
+  #include <string>
+  #include <vector>
+  using namespace std;
   -
   -
   -
-  -
+  #endif
   ```
+2. Estructura movimiento
+   ```cpp
+   struct Movimiento {
+    string nombre;
+    int potencia;
+    int costoPA; 
+    };
+```
+
+
+
 
 
 # Proyecto en Python
