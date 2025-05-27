@@ -23,12 +23,12 @@ Diany Kamila Guzmán Contreras
   #endif
   ```
 2. Estructura movimiento
-   ```cpp
-   struct Movimiento {
-    string nombre;
-    int potencia;
-    int costoPA; 
-    };
+```cpp
+ struct Movimiento {
+ string nombre;
+ int potencia;
+ int costoPA; 
+ };
 ```
 
 
