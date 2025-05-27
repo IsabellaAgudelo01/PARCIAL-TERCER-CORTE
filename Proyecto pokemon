@@ -1,0 +1,16 @@
+## Desarrolos innovadores
+### 1. Ventajas por tipo
+_¿Para qué se implementó?_
+Para simular el comportamiento de los juegos originales de Pokémon, donde algunos tipos tienen ventajas o desventajas sobre otros.
+_¿Por qué se consideró necesario?_
+Para brindarle una mejor experiencia y más cercana a lo que es el pokemon original
+_¿Cómo se llevó a cabo?_
+Se creó una función `calcular_multiplicador` que recibe el tipo del atacante y del defensor, y devuelve un multiplicador (1.5, 0.5 o 1.0) que se aplica al daño.
+### 2. Pantalla con estadísticas de ambos equipos
+_¿Para qué se implementó?_
+Para que el usuario tenga una descripción clara de todos los pokemones disponibles
+_¿Por qué se consideró necesario?_
+como información adicional que complemente el juego y lo haga más dinámico
+_¿Cómo se llevó a cabo?_
+Se implementó una función `mostrar_stats` que muestra los Pokémon restantes de cada equipo con su salud y sus puntos de acción
+
