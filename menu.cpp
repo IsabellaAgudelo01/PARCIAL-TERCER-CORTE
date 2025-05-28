@@ -41,7 +41,7 @@ void mostrar_menu_inicio() {
             continuar = false;
             break;
         default:
-            cout << "\n\tOpción no válida. Intente de nuevo." << endl;
+            cout << "\n\tOpcion no valida. Intente de nuevo." << endl;
             system("pause");
             break;
         }
@@ -59,7 +59,7 @@ vector<Pokemon> seleccionar_equipo(const string& nombre_jugador) {
         cout << "\t\t\t|           " << nombre_jugador << "           |" << endl;
         cout << "\t\t\t|     SELECCIONA TUS POKEMON    |" << endl;
         cout << "\t\t\t----------------------------------" << endl;
-        cout << "\nPokemons disponibles:\n\n";
+        cout << "\nPokemons disponibles (escoger 5):\n\n";
 
         for (size_t i = 0; i < catalogo.size(); ++i) {
             cout << i + 1 << ". " << catalogo[i].nombre
@@ -74,7 +74,7 @@ vector<Pokemon> seleccionar_equipo(const string& nombre_jugador) {
         if (cin.fail() || opcion < 1 || opcion > static_cast<int>(catalogo.size())) {
             cin.clear();
             cin.ignore(1000, '\n');
-            cout << "Opción inválida. Intenta de nuevo.\n";
+            cout << "Opcion invalida. Intenta de nuevo.\n";
             system("pause");
             continue;
         }
@@ -118,7 +118,7 @@ void regenerar_pa(Pokemon& p) {
     if (p.salud > perderVida) {
         p.salud -= perderVida;
         p.puntos_accion += ganarPA;
-        cout << p.nombre << " perdió " << perderVida << " de vida y ganó " << ganarPA << " de PA.\n";
+        cout << p.nombre << " perdio " << perderVida << " de vida y gano " << ganarPA << " de PA.\n";
     }
     else {
         cout << p.nombre << " no tiene suficiente vida para hacer eso.\n";
@@ -156,7 +156,7 @@ void iniciar_duelo(vector<Pokemon>& equipoA, vector<Pokemon>& equipoB) {
 
         int eleccion;
         do {
-            cout << "\nElige una opción (1-" << atacante.movimientos.size() + 1 << "): ";
+            cout << "\nElige una opcion (1-" << atacante.movimientos.size() + 1 << "): ";
             cin >> eleccion;
             if (cin.fail()) {
                 cin.clear();
@@ -178,7 +178,7 @@ void iniciar_duelo(vector<Pokemon>& equipoA, vector<Pokemon>& equipoB) {
             int danio = static_cast<int>(mov.potencia * multiplicador);
 
             if (multiplicador > 1.0)
-                cout << "¡Es super efectivo!\n";
+                cout << "Es super efectivo!\n";
             else if (multiplicador < 1.0 && multiplicador > 0.0)
                 cout << "No es muy efectivo...\n";
             else if (multiplicador == 0.0)
@@ -187,8 +187,8 @@ void iniciar_duelo(vector<Pokemon>& equipoA, vector<Pokemon>& equipoB) {
             defensor.salud -= danio;
             if (defensor.salud < 0) defensor.salud = 0;
 
-            cout << atacante.nombre << " usó " << mov.nombre
-                << " y causó " << danio << " de daño.\n";
+            cout << atacante.nombre << " uso " << mov.nombre
+                << " y causo " << danio << " de danio.\n"; //no deja poner la ñ perdón
         }
 
         if (pA.salud <= 0) {
@@ -209,3 +209,4 @@ void iniciar_duelo(vector<Pokemon>& equipoA, vector<Pokemon>& equipoB) {
     else
         cout << "\n¡Jugador 1 gana el duelo!\n";
 }
+
