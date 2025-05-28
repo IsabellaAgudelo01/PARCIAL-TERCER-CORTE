@@ -194,8 +194,54 @@ vector<Pokemon> seleccionar_equipo(const string& nombre_jugador) {
     vector<Pokemon> catalogo = obtener_catalogo();
 ```
 Anteriormente ya se ha escogido nombre_jugador como JUGADOR 1 o JUGADOR 2
+se crea otra lista llamada seleccionados donde se guardaran los pokemones de cada equipo
+catalogo es el conjunto de pokemones disponibles para elegir
 
+6. while
+```cpp
+while (seleccionados.size() < 5) {
+        system("cls");
+-
+-
+-
+```
+el menú se seguirá repitiendo en caso de que aún no se hayan escogido los 5 pokemones, en cada repetición se limpia la pantalla
 
+7. for menú
+```cpp
+        for (size_t i = 0; i < catalogo.size(); ++i) {
+            cout << i + 1 << ". " << catalogo[i].nombre
+                 << " (Elemento: " << catalogo[i].elemento << ")\n";
+        }
+        cout << "0. Salir (NO permitido hasta seleccionar 5)\n";
+```
+Se listan todos los pokemones que están en catálogo
+Pone una condición en la que, en caso de no haber puesto mínimo 5 pokemones, no se podrá salir del programa
+
+8. opción inválida
+```cpp
+  if (cin.fail() || opcion < 1 || opcion > static_cast<int>(catalogo.size())) {
+            cin.clear();
+            cin.ignore(1000, '\n');
+            cout << "Opción inválida. Intenta de nuevo.\n";
+            system("pause");
+            continue;
+        }
+```
+similar al anterior fragmente de opción inválida
+opcion > static_cast<int>(catalogo.size()) se asegura de que el usuario no ponga otro número que esté fuera del rango de la lista
+
+9. ya seleccionado
+```cpp
+bool ya_seleccionado = false;
+for (int i = 0; i < seleccionados.size(); i++) {
+    if (seleccionados[i].nombre == catalogo[opcion - 1].nombre) {
+        ya_seleccionado = true;
+        break;
+    }
+}
+```
+Verifica que no hayas seleccionado el mismo pokemon
 
 # Proyecto en Python
 **Desarrollos innovadores:*
