@@ -303,10 +303,11 @@ como ya sabemos iA es un índice para llevar la cuenta de cuántos pokemones han
 # Explicación detallada del codigo en Python 
 
 1. Se define una matriz 7x7 para poder representar el parqueadero
+```py
 filas = 7
 columnas = 7
-2. Se definen las variables:
-   
+2.. Se definen las variables:
+```py   
 mapa = [["L" for _ in range(columnas)] for _ in range(filas)]  
 placas = [[None for _ in range(columnas)] for _ in range(filas)]
 tiempos = [[None for _ in range(columnas)] for _ in range(filas)]
@@ -315,7 +316,7 @@ historial = []
 - placas: es otra matriz 7x7, guarda el minuto de entrada simulado de cada vehiculo
 - historial: es una lista que almacena la información de los vehiculos que se retiraron del parqueadero. El historial tiene tres valores: placa, tiempo y valor
 3. Funcion inicializar_mapa()
-  
+```py
   def inicializar_mapa():
     for f in range(filas):
         mapa[f][1] = "."  # Pasillo vertical
@@ -331,7 +332,7 @@ El parqueadero se organiza con un pasillo vertical en la primera columna por ","
 La entrada esta enn la posicion (0,1) con  "E" y la salida en (6,5) con "s". Laas zonas de parqueo que estandisponibles se ubican entre las filass 1 a 5 y las columnas de la 2 a 5, y estan marcadas inicialmente con "L"
 
 4. Función mostrar_mapa()
-
+```py
    def mostrar_mapa():
     print("\nMapa del Parqueadero:")
     for fila in mapa:
@@ -341,6 +342,7 @@ La entrada esta enn la posicion (0,1) con  "E" y la salida en (6,5) con "s". Laa
 Se muestra ell estado actual del parqueadero y cada celda indica si esta libre, ocupada o es pasillo/entrada/salida
 
 5. Función encontrar_espacio()
+```py
    def encontrar_espacio():
     for f in range(1, 6):
         for c in range(2, 6):
@@ -351,7 +353,7 @@ Se muestra ell estado actual del parqueadero y cada celda indica si esta libre, 
 Esta función recorre la zona del parqueo para encontrar la primera celda libre "L" y devuelve su posición.
 
 6. Función ingresar_vehiculo()
-
+```py
    def ingresar_vehiculo():
     espacio = encontrar_espacio()
     if not espacio:
@@ -363,7 +365,7 @@ Esta función recorre la zona del parqueo para encontrar la primera celda libre 
 Se busca un espacio libre, luego se solicita al usuario la placa del vehiculo y el timepo de entrada, y se marca el espacio como ocupado "X", guarda la placa y tiempo en sus matrices correspondientes 
 
 7. Función retirar_vehiculo()
-
+```py
    def retirar_vehiculo():
     placa = input("Ingrese la placa a retirar: ").upper()
     for f in range(1, 6):
@@ -374,6 +376,7 @@ Se busca un espacio libre, luego se solicita al usuario la placa del vehiculo y 
 Busca la placa en las posiciones de parqueo, calcula el tiempo de permanencia y el valor, se libera el espacio en el mapa y guarda los datos en el historial
 
 8. Función consultar_disponibilidad()
+```py
    def consultar_disponibilidad():
     libres = sum(1 for f in range(1, 6) for c in range(2, 6) if mapa[f][c] == "L")
     print(f"\n Espacios disponibles: {libres} de 20\n")
@@ -381,7 +384,7 @@ Busca la placa en las posiciones de parqueo, calcula el tiempo de permanencia y 
 Se cuenta cuantas celdas tiene libre el parqueadero y muestra el total disponible 
 
 9. Función ver_hisorial()
-    
+```py    
     def ver_historial():
     if not historial:
         print("\n No hay historial aún.")
@@ -393,6 +396,7 @@ Se cuenta cuantas celdas tiene libre el parqueadero y muestra el total disponibl
 Se encarga de mostrar todos los vehiculos retirados junto con el tiempo de parqueo y lo que pagaron 
 
 10. Función buscar_vehiculo()
+```py
     def buscar_vehiculo():
     placa = input("Ingrese la placa a buscar: ").upper()
     for f in range(1, 6):
@@ -405,6 +409,7 @@ Se encarga de mostrar todos los vehiculos retirados junto con el tiempo de parqu
 Busca la placa en la zona de parqueo y muestra su ubicaion si se encuentra 
 
 11. Función menu()
+```py
     def menu():
     inicializar_mapa()
     while True:
