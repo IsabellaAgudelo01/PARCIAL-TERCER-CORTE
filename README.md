@@ -427,4 +427,4 @@ Se muetra el menu principal
 Y se llama la funciones correspondientes según la opción seleccionada
 
 # Factores para tener en cuenta 
-# Este proyecto fue realizado con ayuda de IA, para entender mejor el funcionamiento del codigo, de igual manera fue realizado de forma consiente entendiendo cada estructura utilizada en este proyecto
+# Este proyecto fue realizado con el apoyo de IA, para entender mejor el funcionamiento del codigo, de igual manera fue realizado de forma consiente entendiendo cada estructura utilizada en este proyecto
