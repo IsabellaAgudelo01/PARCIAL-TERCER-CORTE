@@ -10,7 +10,7 @@ Diany Kamila Guzmán Contreras
 # Explicación detallada del código en C++
 
 # _Archivo tipos.h_
-  1. Siguiendo la estructura enseñada en clase y utilizando las librerías <string> y <vector>
+  1. Siguiendo la estructura enseñada en clase y utilizando las librerías < string > y < vector >
   ```cpp
   #ifndef TIPOS_H
   #define TIPOS_H
