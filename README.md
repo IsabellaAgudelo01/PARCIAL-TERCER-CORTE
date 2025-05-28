@@ -243,6 +243,52 @@ for (int i = 0; i < seleccionados.size(); i++) {
 ```
 Verifica que no hayas seleccionado el mismo pokemon
 
+10. iniciar_duelo
+```cpp
+void iniciar_duelo(vector<Pokemon>& equipoA, vector<Pokemon>& equipoB) {
+    int turno = 1;
+    int iA = 0, iB = 0;
+```
+Recibe dos equipos de pokemon como parametros 
+int turno = 1 inicializa los turnos en uno, va aumentando de a uno gracias al while
+int iA = 0 se usa para saber cuál pokemon está en batalla , empieza en 0, es decir el primero pokemon del equipo A será quien comenzará la batalla, en caso de que el pokemon muera, iA aumenta uno
+
+11. regenerar_pa
+```cpp
+void regenerar_pa(Pokemon& p)
+```
+Pokemon& p significa que cualquier cambio hecho a p afectará al pokemon original
+
+12. turno de quién
+```cpp
+Pokemon& atacante = (turno % 2 != 0) ? pA : pB;
+Pokemon& defensor = (turno % 2 != 0) ? pB : pA;
+string jugador = (turno % 2 != 0) ? "JUGADOR 1" : "JUGADOR 2";
+```
+En cada linea define cuál será el atacante y quien será el defensor.
+el signo ? funciona como un if, es decir que Pokemon& atacante = (turno % 2 != 0) ? pA : pB; puede ser escrito como:
+```cpp
+Pokemon& atacante;
+if (turno % 2 != 0) {
+    atacante = pA;
+} else {
+    atacante = pB;
+}
+```
+Finalmente, en la última línea guardará el nombre del jugador que esté atacando en el turno
+
+13. jugador ganador
+```cpp
+    if (iA >= equipoA.size())
+        cout << "\n¡Jugador 2 gana el duelo!\n";
+    else
+        cout << "\n¡Jugador 1 gana el duelo!\n";
+}
+```
+como ya sabemos iA es un índice para llevar la cuenta de cuántos pokemones han sido eliminados, si los pokemones eliminados de equipo A son mayores o iguales a la cantidad total de pokemones en el equipo A, quiere decir que el jugador 2 ha ganado
+
+
+
 # Proyecto en Python
 **Desarrollos innovadores:*
 - Historial de vehiculos retirados, con el tiempo y la tarifa.
