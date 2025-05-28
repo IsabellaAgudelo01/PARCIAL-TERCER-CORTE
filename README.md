@@ -103,7 +103,7 @@ no recibe ni retorna nada (void), simplemente declara una función llamada mostr
 ```cpp
 vector<Pokemon> seleccionar_equipo(const string& nombre_jugador);
 ```
-Función que le permitirá al jugador seleccionar su equipo, el nombre será constante y serán definidos más adelante entre jugador 1 y jugador 2
+Función que le permitirá al jugador seleccionar su equipo, el nombre será constante y serán definidos más adelante entre JUGADOR 1 y JUGADOR 2
 
 ```cpp
 void iniciar_duelo(vector<Pokemon>& equipoA, vector<Pokemon>& equipoB);
@@ -122,7 +122,79 @@ Este declara las estadísticas, toma un jugador (por ejemplo jugador 1) y muestr
 ```cpp
 #include <cstdlib>
 ```
-Es una librería que en general se enfoca en gestión de memoria, conversión de números
+Es una librería que en general se enfoca en gestión de memoria, conversión de números, generación de números aleatorios, comandos del sistema operativo, etc
+Se usa esta librería específicamente con fines de usar la función system().
+system("cls"): Esta función limpia la pantalla de la consola
+system("pause"): pausa el programa y espera que el usuario presione una tecla para continuar
+
+2. Función mostrar_menu_inicio
+```cpp
+void mostrar_menu_inicio() {
+    bool continuar = true;
+    int opcion;
+
+    do {
+        system("cls"); // Limpia pantalla
+
+        cout << "\t\t\t" << endl;
+        cout << "\t\t\t POKEMON " << endl;
+        cout << "\t\t\t" << endl;
+
+        cout << "\n\t1. Iniciar Duelo" << endl;
+        cout << "\t2. Salir" << endl;
+
+        cout << "\n\tElija una opción: ";
+        cin >> opcion;
+```
+Hace que el menú se siga repitiendo mientras continuar sea true, en cada repetición mediante la función system("cls") se limpia la pantalla
+3. 
+```cpp
+                if (cin.fail()) {
+            cin.clear();
+            cin.ignore(1000, '\n');
+            opcion = -1;
+        }
+
+ }
+```
+Evita que el programa se detenga si el usuario escribe letras en vez de números.
+if(cin.fail()) se encarga de verificar si la entrada ha fallado, es decir cuando se ingresa por ejemplo una letra, para poder seguir se debe limpiar
+cin.clear() limpia el cin para que deje de ser inválido
+cin.ignore(100, '\n') elimina todo lo que quedó ingresado, hasta 1000 caracteres
+opcion = -1 ya que la entrada es válida, se le da valor -1 a opcion para indicar que no es válida, esto luego será de ayuda para el switch
+cabe recalcar esta parte del código fue apoyada con chatgpt para entender como se llevaría a cabo esta condición 
+
+4. switch
+```cpp
+ switch (opcion) {
+ case 1: {
+     auto equipo1 = seleccionar_equipo("JUGADOR 1");
+     auto equipo2 = seleccionar_equipo("JUGADOR 2");
+     iniciar_duelo(equipo1, equipo2);
+     system("pause");
+     break;
+ }
+ case 2:
+     cout << "\n\tSaliendo del juego..." << endl;
+     continuar = false;
+     break;
+ default:
+     cout << "\n\tOpción no válida. Intente de nuevo." << endl;
+     system("pause");
+     break;
+ }
+```
+Maneja las opciones del menú dependiendo de lo que haya ingresado el usuario. 
+el auto en este caso funciona como deducción automática, es decir que el compilador averigua qué tipo devuelve la función
+
+5. Función seleccionar_equipo
+```cpp
+vector<Pokemon> seleccionar_equipo(const string& nombre_jugador) {
+    vector<Pokemon> seleccionados;
+    vector<Pokemon> catalogo = obtener_catalogo();
+```
+Anteriormente ya se ha escogido nombre_jugador como JUGADOR 1 o JUGADOR 2
+
 
 
 # Proyecto en Python
