@@ -3,7 +3,7 @@ using namespace std;
 
 vector<Pokemon> obtener_catalogo() {
     return {
-        {"Pikachu", "Eléctrico", 100, 5, {
+        {"Pikachu", "Electrico", 100, 5, {
             {"Impactrueno", 20, 2},
             {"Placaje", 10, 1}
         }},
