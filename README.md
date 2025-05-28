@@ -289,6 +289,10 @@ como ya sabemos iA es un índice para llevar la cuenta de cuántos pokemones han
 
 
 
+**Factores a tener en cuenta
+Este proyecto fue realizado con apoyo de chatgpt para explicaciones y ayuda en la estructura del código, no obstante, el trabajo se realizó de forma conciente y con todos los comentarios que se consideró pertinentes para el entendimiento de la realización del código. 
+
+
 # Proyecto en Python
 **Desarrollos innovadores:*
 - Historial de vehiculos retirados, con el tiempo y la tarifa.
